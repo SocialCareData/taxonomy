@@ -25,11 +25,12 @@ Bringing all this together we are then able to consistently and coherently make 
 For version 0.1, this scope is limited to:
 
 - Organisations
-- Services and Service involvements
+- [Services and Service involvements](https://github.com/SocialCareData/taxonomy/blob/main/services.md)
 - Roles and relationships
 - Data Processing Agreements (Information Governance)
 
 The links above take you to our intial proposals for discussion.
+
 (DPA section will be added after an internal review)
 
 Note: The mechanism for exchange is being developed here: [Data Exchange Standard](https://github.com/SocialCareData/data-exchange-standard)
