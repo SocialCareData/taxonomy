@@ -10,8 +10,7 @@ The initial scope is limited to those concepts needed to support the Multi Agenc
 
 As an example, in the context of a single view system:
 - We need a catalog or registry of organisations and service providers, so that we can direct requests for information.
-- We need to be able to refer to service involvements, which requires an ability to classify services.
-- We need to be able describe professionals (a role played by a person) and their relationship to a service involvement.
+- We need to be able to refer to service involvements, which requires an ability to classify services. Within services, we need to be able describe professionals / practitioners and their roles in a service involvement.
 - We need to be able to refer to Data Processing Agreements and potentially to specific agreed data sharing use cases which they authorise.
 
 Bringing all this together we are then able to consistently and coherently make and respond to requests such as:
@@ -26,7 +25,6 @@ For version 0.1, this scope is limited to:
 
 - [Organisations](https://github.com/SocialCareData/taxonomy/blob/main/organisations.md)
 - [Services and Service involvements](https://github.com/SocialCareData/taxonomy/blob/main/services.md)
-- Roles and relationships
 - Data Processing Agreements (Information Governance)
 
 The links above take you to our intial proposals for discussion.
