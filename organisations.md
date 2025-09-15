@@ -35,12 +35,12 @@ FHIR has a resource to describe an [Organisation](https://www.hl7.org/fhir/organ
 
 |Field name|Cardinality|Data Type & Format|Description & Reasoning|
 |-----------------------|-----------|------------------|-----------------------|
-|`identifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|
+|`Identifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|
 |↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|
 |↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|
-|`name`|1 (MUST)|String(UTF-8)|Name of the organisation|
-|`type`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|
-|`status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.||
+|`Name`|1 (MUST)|String(UTF-8)|Name of the organisation|
+|`Type`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|
+|`Status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.||
 |`Verification Status`|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|
 |`Verfication Date`|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|
 |`Information Governance`|0, 1 (MUST)|Code: {[WHAT CODES?]}|References to the DPAs or legislation governing data sharing for safeguarding purposes|
@@ -49,9 +49,6 @@ For operations in data exchange, we anticipate a further set of data requirement
 
 |Field name|Cardinality|Data Type & Format|Description & Reasoning|
 |-----------------------|-----------|------------------|-----------------------|
-|`identifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|
-|↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|
-|↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|
 |`System Provider`|1 (MUST)|String(UTF-8)|Name of the system supplier|
 |`System Version`|1 (MUST)|String(UTF-8)|Name of product and version of system|
 |`Request Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that system passes data request tests satisfactorily|
