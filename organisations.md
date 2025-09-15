@@ -39,7 +39,7 @@ FHIR has a resource to describe an [Organisation](https://www.hl7.org/fhir/organ
 |↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|1|
 |↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|1|
 |`organisationName`|1 (MUST)|String(UTF-8)|Name of the organisation|1|
-|`organisationType`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|1|
+|`organisationType`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|0|
 |`Status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.|0|
 |`Verification Status`|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|0|
 |`Verfication Date`|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|0|
