@@ -33,26 +33,26 @@ Previous work in single view systems has identified the following types of organ
 
 FHIR has a resource to describe an [Organisation](https://www.hl7.org/fhir/organization.html), and we can align with this in some areas. However, we propose the following details are required to facilitate more automated data exchange.
 
-|Field name|Cardinality|Data Type & Format|Description & Reasoning|
-|-----------------------|-----------|------------------|-----------------------|
-|`Identifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|
-|↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|
-|↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|
-|`Name`|1 (MUST)|String(UTF-8)|Name of the organisation|
-|`Type`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|
-|`Status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.||
-|`Verification Status`|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|
-|`Verfication Date`|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|
-|`Information Governance`|0, 1 (MUST)|Code: {[WHAT CODES?]}|References to the DPAs or legislation governing data sharing for safeguarding purposes|
+|Field name|Cardinality|Data Type & Format|Description & Reasoning|Priority|
+|-----------------------|-----------|------------------|-----------------------|---------|
+|`organisationIdentifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|1|
+|↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|1|
+|↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|1|
+|`organisationName`|1 (MUST)|String(UTF-8)|Name of the organisation|1|
+|`organisationType`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|1|
+|`Status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.|0|
+|`Verification Status`|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|0|
+|`Verfication Date`|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|0|
+|`Information Governance`|0, 1 (MUST)|Code: {[WHAT CODES?]}|References to the DPAs or legislation governing data sharing for safeguarding purposes|0|
 
 For operations in data exchange, we anticipate a further set of data requirements (not public facing):
 
-|Field name|Cardinality|Data Type & Format|Description & Reasoning|
-|-----------------------|-----------|------------------|-----------------------|
-|`System Provider`|1 (MUST)|String(UTF-8)|Name of the system supplier|
-|`System Version`|1 (MUST)|String(UTF-8)|Name of product and version of system|
-|`Request Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that system passes data request tests satisfactorily|
-|`Response Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that the system responds to requests satisfactorily|
-|`API endpoints`|1 (MUST)|Code: {[WHAT CODES?]}|Operational endpoints for data exchange|
+|Field name|Cardinality|Data Type & Format|Description & Reasoning|Priority|
+|-----------------------|-----------|------------------|-----------------------|---------|
+|`System Provider`|1 (MUST)|String(UTF-8)|Name of the system supplier|0|
+|`System Version`|1 (MUST)|String(UTF-8)|Name of product and version of system|0|
+|`Request Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that system passes data request tests satisfactorily|0|
+|`Response Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that the system responds to requests satisfactorily|0|
+|`API endpoints`|1 (MUST)|Code: {[WHAT CODES?]}|Operational endpoints for data exchange|0|
 
 <a href="https://github.com/SocialCareData/taxonomy/issues/new?template=content_issue.yml&title=Organisations%20Register:%20" class="web-button" target="_blank">Raise an issue about register of organisations</a>
