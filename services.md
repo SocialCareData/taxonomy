@@ -10,7 +10,7 @@ There's two parts to this: defining services, and defining a service's involveme
 |↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the service.|1|
 |↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|1|
 |`serviceName`|1 (MUST)|String(UTF-8)|Name of the service|1|
-|`serviceType`|1 (MUST)|Code: {[WHAT CODES?]}|Type of the service|0|
+|`serviceType`|1 (MUST)|Code: {1=Central Government, 2=Local Government, 3=Education, 4=Housing, 5=Health, 6=Social Care, 7=Police, 8=Finance, X=Unknown}|(primary) Type of the service|1|
 |`status`|0, 1 (SHOULD)|Code: {[WHAT CODES?]}|The status of the service provision.|0|
 |`Contact`|1 (MUST)|**Object**|Contact details TODO|0|
 
