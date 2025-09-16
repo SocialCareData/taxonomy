@@ -1,0 +1,28 @@
+{
+    "@context": "https://socialcaredata.github.io",
+    "title": "Example Service Register",
+    "description": "An example of a register of all service providers in the national social care system",
+    "items":[
+        {
+            "serviceIdentifier": {
+                "Identifier Value": "Z8727593",
+                "Identifier System": "https://ico.org.uk/ESDWebPages/Entry/"
+            },
+            "serviceName": "University College London Hospitals NHS Foundation Trust"    
+        },
+        {
+            "serviceIdentifier": {
+                "Identifier Value": "5354482",
+                "Identifier System": "https://find-and-update.company-information.service.gov.uk/company/"
+            },
+            "serviceName": "Imago"    
+        },
+        {
+            "serviceIdentifier": {
+                "Identifier Value": "1090210",
+                "Identifier System": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/"
+            },
+            "serviceName": "The Avenues Youth Project"    
+        }
+    ]
+}
