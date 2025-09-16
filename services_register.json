@@ -8,21 +8,24 @@
                 "Identifier Value": "Z8727593",
                 "Identifier System": "https://ico.org.uk/ESDWebPages/Entry/"
             },
-            "serviceName": "University College London Hospitals NHS Foundation Trust"    
+            "serviceName": "University College London Hospitals NHS Foundation Trust",
+            "serviceType": 5    
         },
         {
             "serviceIdentifier": {
                 "Identifier Value": "5354482",
                 "Identifier System": "https://find-and-update.company-information.service.gov.uk/company/"
             },
-            "serviceName": "Imago"    
+            "serviceName": "Imago",
+            "serviceType": 6      
         },
         {
             "serviceIdentifier": {
                 "Identifier Value": "1090210",
                 "Identifier System": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/"
             },
-            "serviceName": "The Avenues Youth Project"    
+            "serviceName": "The Avenues Youth Project",
+            "serviceType": 6    
         }
     ]
 }

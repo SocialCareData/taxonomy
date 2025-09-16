@@ -8,21 +8,24 @@
                 "Identifier Value": "08030289",
                 "Identifier System": "https://find-and-update.company-information.service.gov.uk/company/"
             }, 
-            "organisationName": "Open Data Institute"
+            "organisationName": "Open Data Institute",
+            "organisationType": 3  
         },
         {
             "organisationIdentifier": {
                 "Identifier Value": "06402143",
                 "Identifier System": "https://find-and-update.company-information.service.gov.uk/company/"
             }, 
-            "organisationName": "Social Finance"
+            "organisationName": "Social Finance",
+            "organisationType": 8  
         },
         {
             "organisationIdentifier": {
                 "Identifier Value": "312278",
                 "Identifier System": "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/"
             }, 
-            "organisationName": "Coram"
+            "organisationName": "Coram",
+            "organisationType": 6 
         }
     ]
 }
