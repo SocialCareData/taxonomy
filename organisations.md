@@ -41,28 +41,35 @@ Beyond technical information, though, we must ascertain whether ODS is perfectly
 
 ## Defining a register of `Organisations`
 
-FHIR has a resource to describe an [Organisation](https://www.hl7.org/fhir/organization.html), and we can align with this in some areas. However, we propose the following details are required to facilitate more automated data exchange.
+The register/catalogue will have two kinds of data about each organisation. Firstly, it will contain publicly available summary information -- its name, identification, operational status, and more. Secondly, though, it will contain the technical (Point of Access (PoA)) information required for the organisation to be accessible via the data exchange mechanism we create. Both, listed below, are compared to the ODS [Organisation Data model](https://www.odsdatasearchandexport.nhs.uk/referenceDataCatalogue/Organisation-Data_571324868.html) via the 'ODS alignment' column.
 
-|Field name|Cardinality|Data Type & Format|Description & Reasoning|
-|-----------------------|-----------|------------------|-----------------------|
-|`organisationIdentifier`|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation.|
-|↳ `Identifier Value`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|
-|↳ `Identifier System`|1 (MUST)|URI|A link to the system that the identifier adheres to.|
-|`organisationName`|1 (MUST)|String(UTF-8)|Name of the organisation|
-|`organisationType`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance.|
-|`Status`|0, 1 (MUST)|Code: {[WHAT CODES?]}|The status of the organisation's systems - in terms of ability to make and respond to requests via API.|
-|`Verification Status`|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|
-|`Verfication Date`|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|
-|`Information Governance`|0, 1 (MUST)|Code: {[WHAT CODES?]}|References to the DPAs or legislation governing data sharing for safeguarding purposes|
+### Summary Information
 
-For operations in data exchange, we anticipate a further set of data requirements (not public facing):
+Note: FHIR has a resource to describe an [Organisation](https://www.hl7.org/fhir/organization.html) that we align with in some areas -- with ODS also being built on FHIR, there is therefore clear alignment.
 
-|Field name|Cardinality|Data Type & Format|Description & Reasoning|
-|-----------------------|-----------|------------------|-----------------------|
-|`System Provider`|1 (MUST)|String(UTF-8)|Name of the system supplier|
-|`System Version`|1 (MUST)|String(UTF-8)|Name of product and version of system|
-|`Request Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that system passes data request tests satisfactorily|
-|`Response Test`|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that the system responds to requests satisfactorily|
-|`API endpoints`|1 (MUST)|Code: {[WHAT CODES?]}|Operational endpoints for data exchange|
+|Field name|ODS alignment|Cardinality|Data Type & Format|Description & Reasoning|
+|-----------------------|------|-----------|------------------|-----------------------|
+|`organisationIdentifier`|-|1, Many (MUST)|**Object**|Unique identifiers (IDs) associated with the organisation. In ODS, this object is collapsed into the single `OrganisationCode`, inheriting from FHIR `Identifier.value`, because the Identifier System for all ODS data is the ODS Organisation Code namespace|
+|↳ `Identifier Value`|`OrganisationCode`|1 (MUST)|String(UTF-8)|A single unique identifier attached to the organisation.|
+|↳ `Identifier System`|-|1 (MUST)|URI|A link to the system that the identifier adheres to. Excluded by ODS as described above.|
+|`organisationName`|`OrgName`|1 (MUST)|String(UTF-8)|Legal name of the organisation|
+|`organisationType`|`OrgTypeID`|1 (SHOULD)|Code: {[WHAT CODES?]}|Type of the organisation e.g. Health, Justice, Education - not strictly necessary for the operation of data exchange but convenient in terms of data collection, stakeholder management and information governance. ODS uses a comprehensive list detailed at the bottom of [this page](https://www.odsdatasearchandexport.nhs.uk/referenceDataCatalogue/Roles_571324911.html)|
+|`operationalStatus`|`StatusName`|1 (MUST)|Code: {0: ACTIVE, 1: INACTIVE}|The operational status of the organisation.|
+|`technicalStatus`|-|1 (MUST)|Code: {0: ACTIVE, 1: INACTIVE}|The  status of the organisation's systems - in terms of ability to make and respond to requests via API.|
+|`Verification Status`|-|1 (MUST)|String(UTF-8)|An indication that the organisation's systems have met the required standards in terms of respsonding to requests.|
+|`Verfication Date`|-|0,1 (MUST)|ISO8601: `YYY-MM-DD`|Date of system verification|
+|`Information Governance`|-|0, 1 (MUST)|Code: {[WHAT CODES?]}|References to the DPAs or legislation governing data sharing for safeguarding purposes|
+
+### Point-of-Access (PoA) Information
+
+For operations in data exchange, we anticipate a further set of data requirements (not public facing). Note none are aligned with ODS -- ODS works as a central catalogue for the search and identification of organisations, but does not extend to an operational usage for data exchange. If we were to adopt ODS, we would have to extend each data point with these fields, and populate them as they are added.
+
+|Field name|ODS alignment|Cardinality|Data Type & Format|Description & Reasoning|
+|-----------------------|---|-----------|------------------|-----------------------|
+|`System Provider`|-|1 (MUST)|String(UTF-8)|Name of the system supplier|
+|`System Version`|-|1 (MUST)|String(UTF-8)|Name of product and version of system|
+|`Request Test`|-|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that system passes data request tests satisfactorily|
+|`Response Test`|-|1 (MUST)|Code: {[WHAT CODES?]}|Indicator that the system responds to requests satisfactorily|
+|`API endpoints`|-|1 (MUST)|Code: {[WHAT CODES?]}|Operational endpoints for data exchange|
 
 <a href="https://github.com/SocialCareData/taxonomy/issues/new?template=content_issue.yml&title=Organisations%20Register:%20" class="web-button" target="_blank">Raise an issue about register of organisations</a>
