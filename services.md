@@ -1,5 +1,8 @@
 # Describing a `Service Involvement`
 
+TO DISCUSS: IS THIS REALISTICALLY NECESSARY FOR THE PEEKABOO IMPLEMENTATION?
+
+
 There's two parts to this: defining services, and defining a service's involvement with a person. The former would be like organisations (organisations is for data sharers/stewards/accessors, whereas services is for practitioners) and the latter would (potentially) resemble one item in a ledger attached to each person, therefore referenced by a person and referencing a service provider.  
 
 ## Describing a `Service`: specification
