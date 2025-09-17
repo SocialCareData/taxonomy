@@ -1,14 +1,9 @@
 # Organisations
+Our data exchange infrastructure, at a bare minimum level, involves a social worker sending a query about a person-in-care, the data exchange mechanism directing that query to local and national organisations, and the response being a list of organisations that hold data about that person. This requires a register or catalogue of all organisations that would be data-sharers in the UK, both in the context of social care and in broader person-centric contexts (like policing, education, and more). Such a register/catalogue would have to be centralised, well-maintained, and strongly machine-accessible.
 
-At a local level social workers will have records of relevant organsiations and safeguarding contacts.
+---
 
-However, there is currently no central register or catalog that meets our needs.
-
-We're exploring approaches to this challenge - essentially a national data infrastructure question.
-
-Our proposal is to compile an initial version of such a registry, drawing on the experise of the network to identify appropriate resources.
-
-## Organsations of interest
+#### Organisations of interest
 
 Previous work in single view systems has identified the following types of organisations of interest:
 
@@ -26,8 +21,23 @@ Previous work in single view systems has identified the following types of organ
 ||School Nurse|
 |Housing|Housing associations|
 ||Temporary housing agencies|
+|Government|Local Government|
+||Central Government|
 
 <a href="https://github.com/SocialCareData/taxonomy/issues/new?template=content_issue.yml&title=Organisations%20of%20interest:%20" class="web-button" target="_blank">Raise an issue about organisations of interest</a>
+
+---
+
+## Aligning with the Organisation Data Service (ODS)
+
+While we could make our own register/catalogue, an ongoing design principle of our work is to re-use existing data standards where possible. Here, we identified the [NHS England Organisation Data Service (ODS)](https://www.odsdatasearchandexport.nhs.uk/) as a potential standard for re-use.
+
+The ODS serves as an API to search for organisations and practitioners in the UK Health and Social Care system. It is built on top of FHIR, with a comprehensive [data model](https://www.odsdatasearchandexport.nhs.uk/referenceDataCatalogue/index.html) that enables organisations to be clearly described and categorised. The underlying register of organisations is regularly maintained, refreshed at 2am every night.
+
+Our requirements for a register/catalogue, at a technical level, may extend beyond what is served by the ODS, but that is not to say that we cannot use ODS as a starting point, a foundation for our own standard. To examine this further, we designed the required fields we had for organisations below, and then compared where there was alignment with ODS and where there was misalignment. Findings will be discussed in the following sections.
+
+Beyond technical information, though, we must ascertain whether ODS is perfectly suitable for our use case. Does it contain all organisations/types of organisations in the social care ecosystem? Does it contain adequate information about the roles these organisations carry out? Is the register complete, accurate, and disambiguated? This is an area of ongoing exploration.
+
 
 ## Defining a register of `Organisations`
 
