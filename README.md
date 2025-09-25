@@ -25,11 +25,9 @@ For version 0.1, this scope is limited to:
 
 - [Organisations](https://github.com/SocialCareData/taxonomy/blob/main/organisations.md)
 - [Services and Service involvements](https://github.com/SocialCareData/taxonomy/blob/main/services.md)
-- Data Processing Agreements (Information Governance)
+- [Information Governance](https://github.com/SocialCareData/taxonomy/blob/main/information_governance.md)
 
 The links above take you to our intial proposals for discussion.
-
-(DPA section will be added after an internal review)
 
 Note: The mechanism for exchange is being developed here: [Data Exchange Standard](https://github.com/SocialCareData/data-exchange-standard)
 
